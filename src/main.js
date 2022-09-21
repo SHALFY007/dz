@@ -14,19 +14,11 @@ dateCalcForm.addEventListener("submit", handleCalcDates);
 buttonStart.addEventListener('click', setTimer)
 
 function setTimer(event) {
-    if (timerCount.textContent == '' ||
-        timerCount.textContent == 'Осталось: 0 секунд' ||
-        timerCount.textContent == `Осталось: ${timerInput.value} секунд`) {
-        event.preventDefault();
-        timer(timerInput.value)
-    } else {
-        timerCount.textContent = 'Таймер уже запущен!'
-        console.log('aasd')
-    }
+    event.preventDefault();
+    timer(timerInput.value)
+    console.log('aasd')
 
-};
-function clearTime(event) {
-    timerCount.textContent = timerCount.textContent;
+
 }
 function handleCalcDates(event) {
     dateCalcResult.innerHTML = "";
